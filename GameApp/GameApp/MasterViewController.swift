@@ -20,7 +20,7 @@ class MasterViewController: UITableViewController {
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
         
         
-        let data = NSFileManager.defaultManager().contentsAtPath(NSBundle.mainBundle().pathForResource("data", ofType: "json")!)
+        var data = NSFileManager.defaultManager().contentsAtPath(NSBundle.mainBundle().pathForResource("data", ofType: "json")!)
         
         do{
             objects = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as! [NSDictionary]
