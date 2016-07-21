@@ -14,9 +14,7 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var numberofplayerslabel: UILabel!
     
-    @IBOutlet weak var descriptionlabel: UILabel!
-    
-    
+    @IBOutlet weak var descriptiontext: UITextView!
     
     
     
@@ -36,12 +34,29 @@ class DetailViewController: UIViewController {
         if let detail = self.detailItem {
             
             gametitlelabel.text = detailItem!["Game"] as! String
-            let numbOfPlayers = detailItem!["# of Players"] as! Double
-            numberofplayerslabel.text = "\(numbOfPlayers)"
-            descriptionlabel.text = detailItem!["Rules"] as! String
-            descriptionlabel.numberOfLines = 0
-//            descriptionlabel.lineBreakMode = NSLineBreakMode.ByWordWrapping
+            let numOfPlayers = detailItem!["# of Players"] as! Double
+            let numToShow : String = parseNumberOfPlayers(numOfPlayers)
+            numberofplayerslabel.text = numToShow
+            descriptiontext.text = detailItem!["Rules"] as! String
+
         }
+    }
+    
+    func parseNumberOfPlayers(numbers : Double) -> String {
+        var returnString : String  = ""
+        let lowerBound: Int = Int(numbers)
+        let upperBound: Int = Int(numbers * 100) % 100
+        if upperBound == 15
+        {returnString = String(lowerBound) + "-" + String(upperBound) + "+"}
+        else if upperBound == 0
+        {returnString = String(lowerBound)}
+        else
+        {returnString = String(lowerBound) + "-" + String(upperBound)}
+        
+        return returnString
+        
+    
+        
     }
 
     override func viewDidLoad() {
