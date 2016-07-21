@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0D174091D40B1AB006844DD /* FilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0D174081D40B1AB006844DD /* FilterView.xib */; };
 		D0F6A9EE1D34B9CB00EBE11C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6A9ED1D34B9CB00EBE11C /* AppDelegate.swift */; };
 		D0F6A9F01D34B9CB00EBE11C /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6A9EF1D34B9CB00EBE11C /* MasterViewController.swift */; };
 		D0F6A9F21D34B9CB00EBE11C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F6A9F11D34B9CB00EBE11C /* DetailViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D0D174081D40B1AB006844DD /* FilterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FilterView.xib; sourceTree = "<group>"; };
 		D0F6A9EA1D34B9CB00EBE11C /* GameApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F6A9ED1D34B9CB00EBE11C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0F6A9EF1D34B9CB00EBE11C /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				D0F6A9F81D34B9CB00EBE11C /* LaunchScreen.storyboard */,
 				D0F6A9FB1D34B9CB00EBE11C /* Info.plist */,
 				D0F6AA011D34BCB400EBE11C /* data.json */,
+				D0D174081D40B1AB006844DD /* FilterView.xib */,
 			);
 			path = GameApp;
 			sourceTree = "<group>";
@@ -128,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0D174091D40B1AB006844DD /* FilterView.xib in Resources */,
 				D0F6A9FA1D34B9CB00EBE11C /* LaunchScreen.storyboard in Resources */,
 				D0F6A9F71D34B9CB00EBE11C /* Assets.xcassets in Resources */,
 				D0F6A9F51D34B9CB00EBE11C /* Main.storyboard in Resources */,
@@ -294,6 +298,7 @@
 				D0F6AA001D34B9CB00EBE11C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

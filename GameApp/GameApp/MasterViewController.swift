@@ -13,11 +13,40 @@ class MasterViewController: UITableViewController {
     var detailViewController: DetailViewController? = nil
     var objects = [NSDictionary]()
 
+    @IBAction func Filter(sender: AnyObject) {
+        
+        NSBundle.mainBundle().loadNibNamed("FilterView", owner: self, options: nil)
+        var FilterViewArray =  NSBundle.mainBundle().loadNibNamed("FilterView", owner: self, options: nil)
+        var FilterView = FilterViewArray[0] as! UIView
+        UIApplication.sharedApplication().keyWindow
+        var window = UIApplication.sharedApplication().keyWindow
+        window?.rootViewController?.view
+        var rootview = window?.rootViewController?.view
+        rootview?.addSubview(FilterView)
+        
+        FilterView.frame.origin.x=0
+        FilterView.frame.origin.y=self.navigationController!.navigationBar.frame.height+(self.navigationController?.navigationBar.frame.origin.y)!
+        
+        FilterView.frame.size.height=rootview!.frame.height
+        FilterView.frame.size.width=rootview!.frame.width
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.navigationItem.leftBarButtonItem = self.editButtonItem()
+    
         
         
         var data = NSFileManager.defaultManager().contentsAtPath(NSBundle.mainBundle().pathForResource("data", ofType: "json")!)
